@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Practice - Named Colors</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+            background-color: dodgerblue; 
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: white;
+            width: 100%;
+            max-width: 800px;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+        }
+
+        .header-box {
+            background-color: lightgreen; 
+            height: 120px;
+            width: 100%;
+        }
+
+        
+        .middle-section {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 15px;
+        }
+
+        .blue-box {
+            background-color: #3CB; 
+            height: 80px; 
+        }
+
+        .bottom-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 15px;
+        }
+
+        .grey-box {
+            background-color: gray; 
+            height: 60px;
+        }
+
+        @media (min-width: 480px) {
+            
+            .middle-section {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+            
+            .blue-box {
+                height: 150px;
+            }
+
+            .bottom-section {
+                grid-template-columns: repeat(4, 1fr); 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-box"></div>
+
+        <div class="middle-section">
+            <div class="blue-box"></div>
+            <div class="blue-box"></div>
+            <div class="blue-box"></div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="grey-box"></div>
+            <div class="grey-box"></div>
+            <div class="grey-box"></div>
+            <div class="grey-box"></div>
+        </div>
+    </div>
+
+</body>
+</html>
