@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 圖片排版練習</title>
+    <style>
+
+        .image-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 900px;
+            margin: 50px auto;
+        }
+
+        .img-left {
+            width: 33%;
+            height: 300px;
+            border-radius: 18px;
+            object-fit: cover; 
+            background-color: #eee;
+        }
+
+        .img-middle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover; 
+            background-color: #ddd;
+            border: 1px solid #ccc;
+        }
+
+		.img-right {
+            width: 33%;
+            height: 300px;
+            object-fit: fill; 
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Series-E235-0_4.jpg/960px-Series-E235-0_4.jpg" 
+             alt="Left" 
+             class="img-left">
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Series-E235-1000_F35.jpg/960px-Series-E235-1000_F35.jpg" 
+             alt="Middle" 
+             class="img-middle">
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Series-E235-0_4.jpg/960px-Series-E235-0_4.jpg" 
+             alt="Right" 
+             class="img-right">
+    </div>
+
+</body>
+</html>
