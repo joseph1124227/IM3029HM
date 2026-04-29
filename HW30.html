@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  
+  <style>
+    .box {
+      border: 1px solid #999;
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    #myText {
+      font-weight: normal;
+      margin-bottom: 30px;
+      color: black;
+    }
+
+    .box:has(#myBtn:hover) #myText {
+      color: pink;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <div class="box">
+    <h2 id="myText">Hello</h2>
+    <button id="myBtn">Button</button>
+  </div>
+  
+  <script>
+    document.getElementById('myBtn').addEventListener('click', function() {
+
+      document.getElementById('myText').innerText = 'Mouse Click';
+    });
+  </script> 
+  
+</body>
+</html>
