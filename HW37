@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle</title>
+
+</head>
+<body>
+
+    <h2>圓形計算</h2>
+    
+    <label for="radiusInput">R=</label>
+    <input type="number" id="radiusInput" value="5" min="0">
+    <button onclick="performCalculations()">計算</button>
+
+    <div class="result" id="circumferenceResult"></div>
+    <div class="result" id="areaResult"></div>
+
+    <script>
+
+        function calcCircumference(radius) {
+
+            const circumference = 2 * Math.PI * radius;
+            
+            const outputText = "The circumference is " + circumference.toFixed(2);
+            
+            document.getElementById("circumferenceResult").innerText = outputText;
+            
+
+            console.log(outputText);
+        }
+
+
+        function calcArea(radius) {
+
+            const area = Math.PI * Math.pow(radius, 2);
+
+            const outputText = "The area is " + area.toFixed(2);
+
+            document.getElementById("areaResult").innerText = outputText;
+
+            console.log(outputText);
+        }
+
+        function performCalculations() {
+
+            const radius = parseFloat(document.getElementById("radiusInput").value);
+            
+            if (isNaN(radius) || radius < 0) {
+                alert("請輸入正確的半徑數值！");
+                return;
+            }
+
+            calcCircumference(radius);
+            calcArea(radius);
+        }
+
+        performCalculations();
+    </script>
+
+</body>
+</html>
